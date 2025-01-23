@@ -4,7 +4,19 @@ interface Friend {
     age: number
 }
 
-// (Optional) Change the names below to your friends.
+interface Colleague {
+    name: string;
+    department: string;
+    contact: {
+      email: string;
+      extension: number;
+    };
+  }
+  
+interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
 
 const friend1 = {
     name: "Paul Fleming",
@@ -48,7 +60,7 @@ const friend1 = {
       extension: 125,
     },
   };
-  const colleagues = {
+  export const colleagues : ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
